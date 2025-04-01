@@ -47,7 +47,7 @@ echo "5. Count number of executable files in a given directory "
 echo "6. Exit"
 # Loop until the user chooses to exit
 while true; do
-     read -p "Select an option (1-4): " option
+     read -p "Select an option (1-6): " option
      case $option in
            1) # List directory contents
               list_directory_contents
@@ -55,19 +55,21 @@ while true; do
            2) # Filter and sort directory contents
               filter_and_sort_contents
               ;;
-           3) #Search for a file
+           3) # Search for a file
               search
               ;;
-           4) count
+           4) # Count number of files and directories
+              count
               ;;
-           5) exeno
+           5) # Count number of executable files in a given directory 
+              exeno
               ;;
            6) # Exit the script
               echo "Exiting the Piping Commands Manager. Goodbye!"
               exit 0
               ;;
            *) # Invalid option
-              echo "Invalid option. Please select 1-3."
+              echo "Invalid option. Please select 1-6."
               ;;
      esac
 echo "" # Print a newline for better readability
